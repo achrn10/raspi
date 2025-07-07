@@ -17,8 +17,10 @@ def get_ip_address():
 
 def display_ip(ip_address):
     if sense:
-        sense.show_message(ip_address, scroll_speed=0.05, text_colour=[255, 255, 255], back_colour=[0, 0, 0])
+        sense.set_rotation(180)
+        sense.show_message(ip_address, scroll_speed=0.15, text_colour=[100, 155, 100], back_colour=[0, 0, 0])
         time.sleep(2)  # Display for 2 seconds
+        print(f"Emulator: IP Address: {ip_address}")
     else:
         print(f"Emulator: IP Address: {ip_address}")
 
